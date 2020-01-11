@@ -88,6 +88,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <AdditionalIncludeDirectories>./lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -139,17 +140,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="lib\matrix.cpp" />
+    <ClCompile Include="lib\runtime.cpp" />
+    <ClCompile Include="lib\sort.cpp" />
+    <ClCompile Include="lib\window.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="matrix.cpp" />
-    <ClCompile Include="runtime.cpp" />
-    <ClCompile Include="sort.cpp" />
-    <ClCompile Include="window.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="matrix.h" />
-    <ClInclude Include="runtime.h" />
-    <ClInclude Include="sort.h" />
-    <ClInclude Include="window.h" />
+    <ClInclude Include="lib\matrix.h" />
+    <ClInclude Include="lib\runtime.h" />
+    <ClInclude Include="lib\sort.h" />
+    <ClInclude Include="lib\window.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

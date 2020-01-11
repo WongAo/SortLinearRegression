@@ -35,12 +35,20 @@ void startSort() {
 	for (i = 0; i < w.getSortObj_length(); i++) {    //根据排序算法对象数组的长度循环
 		if (!w.sortObj_arr[i].isAlive)               //判断是否需要运行该算法
 			continue;
-		int sortTime = w.sortObj_arr[i].sortTime,    //获取排序次数
+
+		int sortDataLength = w.sortObj_arr[i].sortDataLength,    //获取排序数据集大小
+			sortOnceTime = w.sortObj_arr[i].sortOnceTime,  //获取每组数据集排序的次数
 			sortSpan = w.sortObj_arr[i].sortSpan;    //获取排序数组长度间隔
-		for (j = 1; j <= sortTime; j++) {
-			int temp = j * sortTime * sortSpan;
+
+		for (j = 1; j <= sortDataLength; j++) {
+			int temp = j * sortDataLength * sortSpan;
 			int* arr = getRandomArray(temp);         //根据排序次数和排序间隔生成随机数组
-			double time = getRunTime(w.sortObj_arr[i].sort, arr, temp) / timeO1; //获取排序运行时间
+			double time = 0; 
+			for (int k = 0; k < sortOnceTime; k++) {
+				time += getRunTime(w.sortObj_arr[i].sort, arr, temp) / timeO1; //获取排序运行时间
+			}
+			time /= sortOnceTime;
+			free(arr);
 			w.sortObj_arr[i].addPoint((double)temp, time);  //存入运行时间-样本数
 		}
 	}

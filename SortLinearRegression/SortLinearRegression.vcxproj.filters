@@ -18,30 +18,30 @@
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="matrix.cpp">
+    <ClCompile Include="lib\matrix.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="runtime.cpp">
+    <ClCompile Include="lib\runtime.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="window.cpp">
+    <ClCompile Include="lib\sort.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="sort.cpp">
+    <ClCompile Include="lib\window.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="matrix.h">
+    <ClInclude Include="lib\matrix.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="sort.h">
+    <ClInclude Include="lib\runtime.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="runtime.h">
+    <ClInclude Include="lib\sort.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="window.h">
+    <ClInclude Include="lib\window.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

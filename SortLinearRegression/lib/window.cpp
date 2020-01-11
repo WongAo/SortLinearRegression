@@ -29,7 +29,7 @@ sortObj::sortObj(const char* name, int color, void (*sort)(int arr[], int length
 	strcpy(this->name, name);
 	this->color = color;
 	this->sort = sort;
-	this->sortTime = sortTime;
+	this->sortDataLength = sortTime;
 	this->sortSpan = sortSpan;
 }
 void sortObj::setCoe(double* coe) {
@@ -43,7 +43,7 @@ double* sortObj::getCoe() {
 void sortObj::addPoint(double x, double y) {
 	point[pointLength][0] = x;
 	point[pointLength][1] = y;
-	drawPoint((int)x / sortTime, (int)y / 100000);
+	drawPoint((int)x / sortDataLength, (int)y / 100000);
 	pointLength++;
 }
 void sortObj::drawPoint(int x, int y) {  //…¢µ„Õº¥Úµ„

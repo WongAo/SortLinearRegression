@@ -1,7 +1,6 @@
 #pragma once
 
 
-
 /*-----矩阵的各种算法及矩阵最小二乘法算法------*/
 double** newMatrix(int x, int y);                       //分配新矩阵内存
 double** newE(int n, double a);                        //生成a*单位矩阵，岭回归所加的正则项

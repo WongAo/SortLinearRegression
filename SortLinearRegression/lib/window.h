@@ -11,8 +11,9 @@ public:
 	int color;
 	double point[1001][2];
 	int pointLength = 0;
-	int sortTime = 100;
-	int sortSpan = 10;
+	int sortDataLength = 100;  //数据集大小
+	int sortOnceTime = 1;  //每组数据集排序的次数（多次排序，取平均值）
+	int sortSpan = 10;  //每组数据集的间隔
 	int isAlive = 0;
 	void (*sort)(int arr[], int length);
 	sortObj(const char* name, int color);

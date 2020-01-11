@@ -14,7 +14,7 @@ int* copyArray(int arr[], int length) {  //复制数组
 }
 
 double getRunTime(void (*sort)(int arr[], int length), int arr[], int length) {
-	//int* tempArr = copyArray(arr, length);
+	int* tempArr = copyArray(arr, length);
 	double run_time;
 	LARGE_INTEGER time_start;	                     //开始时间
 	LARGE_INTEGER time_over;	                     //结束时间
@@ -23,10 +23,10 @@ double getRunTime(void (*sort)(int arr[], int length), int arr[], int length) {
 	QueryPerformanceFrequency(&f);
 	dqFreq = (double)f.QuadPart;
 	QueryPerformanceCounter(&time_start);	//计时开始
-	(*sort)(arr, length);
+	(*sort)(tempArr, length);
 	QueryPerformanceCounter(&time_over);	//计时结束
 	run_time = 1000000 * (time_over.QuadPart - time_start.QuadPart) / dqFreq; //乘以1000000把单位由秒化为微秒，精度为1000 000/（cpu主频）微秒
-	free(arr); //释放内存
+	free(tempArr); //释放内存
 	return run_time;
 }
 
