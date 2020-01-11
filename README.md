@@ -3,4 +3,4 @@
 
 通过岭回归分析排序算法时间复杂度
 
-![preview](image\preview.jpg)
+![preview](https://raw.githubusercontent.com/WongAo/SortLinearRegression/master/image/preview.jpg?token=AOCROHZGG3NWQM3SHFRCZYS6DHE6S)
