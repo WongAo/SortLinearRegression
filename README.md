@@ -3,4 +3,4 @@
 
 通过岭回归分析排序算法时间复杂度
 
-![preview](.\image\preview.jpg)
+![preview](image\preview.jpg)
